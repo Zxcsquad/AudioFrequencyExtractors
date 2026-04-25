@@ -28,6 +28,7 @@ body {
     line-height: 1.6;
     color: var(--dark);
     background-color: var(--gray);
+    font-size: 16px;
 }
 
 .container {
@@ -90,6 +91,100 @@ body {
 .btn-nav:hover {
     background: var(--secondary);
     color: var(--light) !important;
+}
+
+/* Мобильная навигация */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 2
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--dark);
+}
+
+.btn-primary:hover {
+    background: #e67e00;
+}
+
+/* Мобильный герой */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}0px;
+    }
+
+    .logo {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--gray-light);
+    }
+
+    .btn-nav {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* ==================== ГЕРОЙ ==================== */
@@ -557,13 +652,25 @@ section h3 {
 
 /* ==================== АДАПТИВ ==================== */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
     .nav-links {
         gap: 15px;
         font-size: 14px;
     }
 
+    .hero {
+        padding: 60px 20px;
+    }
+
     .hero-content h1 {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     .hero-content p {
@@ -572,20 +679,44 @@ section h3 {
 
     .hero-buttons {
         flex-direction: column;
+        gap: 10px;
     }
 
     .btn {
-        padding: 12px 30px;
+        padding: 12px 20px;
         font-size: 14px;
     }
 
     section {
-        padding: 50px 20px;
+        padding: 40px 20px;
     }
 
     section h2 {
-        font-size: 28px;
+        font-size: 24px;
         margin-bottom: 30px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+
+    .steps, .use-cases-grid, .specs-content, .pricing-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .download-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        gap: 10px;
     }
 
     .pricing-card.pro {
@@ -599,10 +730,47 @@ section h3 {
 
 @media (max-width: 480px) {
     .nav-container {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 20px;
-        gap: 10px;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    section h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .feature-card, .step, .use-case, .pricing-card {
+        padding: 15px;
+    }
+
+    .download-btn {
+        padding: 20px;
+    }
+}
     }
 
     .nav-links {
